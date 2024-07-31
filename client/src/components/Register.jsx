@@ -82,13 +82,6 @@ export default function Register() {
           <div className="quote">
             <p>{quote}</p>
           </div>
-          {/* <div className="image-container">
-            <img
-              src="path_to_your_image.jpg"
-              alt="Cooking"
-              className="register-image"
-            />
-          </div> */}
         </div>
       </div>
     </div>
