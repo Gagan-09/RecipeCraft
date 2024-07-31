@@ -1,0 +1,5 @@
+npm i express cors bcrypt jsonwebtoken mongoose nodemon dotenv
+
+npm i --save-dev nodemon 
+
+Note: if u want to use  import express from "express" then in package.json->below license->"type":"module"

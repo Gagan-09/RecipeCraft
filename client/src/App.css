@@ -1,0 +1,660 @@
+/* Basic Navbar Styles */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #333;
+  padding: 10px 20px;
+  color: white;
+  position: relative;
+}
+
+.logo img {
+  max-height: 40px;
+}
+
+.nav-title {
+  margin: 0;
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  flex: 1;
+}
+
+.menu-button {
+  display: none; /* Hidden by default */
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 20;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a,
+.nav-links button {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px; /* Margin between links */
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links button:hover {
+  color: #b8b7b7;
+}
+#create-span{
+  margin-right: 15px;
+}
+.logout-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: white;
+}
+
+/* Specific margin adjustments for links */
+.nav-links .create-recipe,
+.nav-links .saved-recipes {
+  margin: 0 15px; /* Default margin */
+}
+
+/* Media Queries */
+
+/* For devices with max-width of 768px */
+@media (max-width: 768px) {
+  .menu-button {
+    display: block; /* Show menu button */
+  }
+
+  .nav-links {
+    display: none; /* Hide links by default */
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background-color: #333;
+    border-radius: 5px;
+    padding: 10px;
+    width: 200px;
+    flex-direction: column;
+    z-index: 15;
+  }
+
+  .nav-links.open {
+    display: flex; /* Show links when menu is open */
+  }
+
+  .nav-links a,
+  .nav-links button {
+    margin: 10px 0; /* Margin for vertical links in mobile view */
+  }
+
+  .nav-title {
+    display: block; /* Show title on mobile */
+  }
+}
+
+/* For devices with min-width of 769px */
+@media (min-width: 769px) {
+  .menu-button {
+    display: none; /* Hide menu button */
+  }
+
+  .nav-links {
+    display: flex; /* Show links inline */
+  }
+
+  .nav-title {
+    display: none; /* Hide title on laptops and larger screens */
+  }
+}
+
+/* Register */
+/* Register.css */
+
+html, body {
+  height: 100%; /* Ensure the html and body cover the full viewport height */
+  margin: 0; /* Remove default margin */
+}
+
+.login-container {
+  background-image: url('./login.jpg'); /* Image for the login page */
+  background-repeat: no-repeat;
+  background-size: cover; /* Ensures the image covers the whole container */
+  background-position: center; /* Center the image */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+  margin: 0;
+}
+
+.register-container {
+  background-image: url('./register5.jpg'); /* Image for the register page */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+  margin: 0;
+}
+
+.register-content,
+.login-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  max-width: 800px;
+  background-color: white;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.reg-form,
+.login-form {
+  width: 50%;
+  padding-right: 20px;
+}
+
+.quote {
+  margin-bottom: 20px;
+  font-style: italic;
+  text-align: center;
+  color: #666;
+  font-weight: 900;
+  font-size: larger;
+  font-family: SpaceGrotesk-Light;
+}
+
+.quote-image-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 20px;
+  border-left: 1px solid #ccc;
+  margin-left: 20px;
+  position: relative;
+}
+
+.quote-image-container::before {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 100%;
+  background-color: #ccc;
+  position: absolute;
+  left: -20px;
+  top: 0;
+}
+
+.register-image,
+.login-image {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.reg-form h2,
+.login-form h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.reg-form-div,
+.login-form-div {
+  margin-bottom: 15px;
+}
+
+.reg-form label,
+.login-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.reg-form input,
+.login-form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.reg-form button,
+.login-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.reg-form button:hover,
+.login-form button:hover {
+  background-color: #555;
+}
+
+.register-but {
+  text-align: center; 
+  margin-top: 20px; 
+}
+
+.register-but a {
+  display: inline-block;
+  padding: 12px 30px; 
+  text-decoration: none;
+  color: #fff;
+  background-color: #007bff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.register-but a:hover {
+  background-color: #0056b3; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.register-but a:active {
+  background-color: #004085; 
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Media queries */
+
+/* For tablets and smaller screens */
+@media (max-width: 1024px) {
+  .register-content, .login-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .quote-image-container {
+    margin-left: 0;
+    margin-top: 20px;
+    width: 100%;
+    padding-left: 0; /* Adjust padding to fit smaller screens */
+  }
+
+  .quote-image-container::before {
+    display: none;
+  }
+
+  .register-image,
+  .login-image {
+    width: 80%; /* Make sure images are responsive */
+  }
+}
+
+@media (max-width: 768px) {
+  .reg-form, .login-form {
+    padding: 15px;
+    max-width: 90%;
+  }
+
+  .quote {
+    font-size: 14px;
+  }
+
+  .register-image,
+  .login-image {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+  }
+}
+
+@media (max-width: 480px) {
+  .register-content, .login-content {
+    padding: 10px;
+  }
+
+  .quote {
+    font-size: 12px;
+  }
+
+  .reg-form, .login-form {
+    padding: 10px;
+  }
+
+  .register-but a {
+    padding: 8px 15px;
+  }
+
+  .register-image,
+  .login-image {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+  }
+}
+
+/* ----->Create Recipe<------ */
+
+.create-recipe {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.create-recipe h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.add-ingredient {
+  display: block;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-ingredient:hover {
+  background-color: #0056b3;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.9em;
+  margin-top: 5px;
+}
+
+.video-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #555;
+}
+
+/* Media queries */
+
+/* For tablets and smaller screens */
+@media (max-width: 1024px) {
+  .form-group input,
+  .form-group textarea {
+    padding: 8px;
+  }
+
+  .add-ingredient,
+  .submit-btn {
+    padding: 8px;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+  .create-recipe {
+    padding: 15px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 6px;
+  }
+
+  .add-ingredient,
+  .submit-btn {
+    padding: 6px;
+  }
+
+  .video-container iframe {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* For very small devices */
+@media (max-width: 480px) {
+  .create-recipe {
+    padding: 10px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 5px;
+  }
+
+  .add-ingredient,
+  .submit-btn {
+    padding: 5px;
+  }
+
+  .video-container iframe {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+/* ----------------------------------------------->Home<--------------------------------- */
+@media (max-width: 768px) {
+  .recipe-details .ingredients,
+  .recipe-details .instructions,
+  .recipe-details .video-container,
+  .recipe-details .cooking-time {
+    display: none;
+  }
+
+  .recipe-details.expanded .ingredients,
+  .recipe-details.expanded .instructions,
+  .recipe-details.expanded .video-container,
+  .recipe-details.expanded .cooking-time {
+    display: block;
+  }
+}
+.home-body {
+  background-color: #CCE6F4;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-top: 20px;
+}
+
+ul.lists {
+  list-style: none;
+  padding: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 20px; 
+}
+
+li.recipe-card {
+  flex: 1 1 calc(50% - 20px); 
+  display: flex;
+  flex-direction: column;
+  background-color: #EDF2F4;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative; 
+}
+
+.video-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.recipe-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.recipe-header {
+  margin-bottom: 10px;
+}
+
+h2 {
+  margin: 0;
+  color: #555;
+  text-align: center;
+}
+
+.save-btn {
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px; 
+}
+
+.save-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.ingredients {
+  margin-bottom: 15px;
+}
+
+.ingredients h3 {
+  margin: 0 0 10px 0;
+  color: #555;
+}
+
+.ingredients ul {
+  list-style: disc inside;
+  margin: 0;
+  padding: 0 0 0 20px;
+}
+
+.ingredients li {
+  margin: 5px 0;
+  padding: 10px;
+  background-color: rgb(217, 214, 214);
+  border-radius: 5px;
+}
+
+.video-box {
+  width: 90%;
+  height: 300px;
+}
+
+.instructions {
+  margin-bottom: 15px;
+}
+
+.instructions h3 {
+  margin: 0 0 10px 0;
+  color: #555;
+}
+
+.instructions p {
+  margin: 0;
+  color: #666;
+}
+
+.image-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 10px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.recipe-image {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.cooking-time h3 {
+  margin-top: auto;
+  margin: 0;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  ul.lists {
+    gap: 10px; 
+  }
+
+  li.recipe-card {
+    flex: 1 1 100%;
+    margin-bottom: 20px; 
+  }
+}
+
+ul.lists::after {
+  content: "";
+  flex: 1 1 calc(50% - 20px); 
+  display: block; 
+  visibility: hidden;
+  height: 0; 
+}

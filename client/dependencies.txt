@@ -1,0 +1,2 @@
+npm i react-router-dom axios react-cookie
+npm i react-bootstrap bootstrap
