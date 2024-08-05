@@ -126,7 +126,7 @@ html, body {
 }
 
 .login-container {
-  background-image: url('./login.jpg'); /* Image for the login page */
+  /* background-image: url('./login.jpg'); Image for the login page */
   background-repeat: no-repeat;
   background-size: cover; /* Ensures the image covers the whole container */
   background-position: center; /* Center the image */

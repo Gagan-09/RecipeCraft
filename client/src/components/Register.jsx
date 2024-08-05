@@ -52,7 +52,21 @@ export default function Register() {
   };
 
   return (
-    <div className="register-container">
+    // <div className="register-container">
+    <div
+      style={{
+        position: "relative",
+        minHeight: "100vh",
+        backgroundImage: "url(/register5.jpg)", // Ensure correct path, starting with '/'
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        display: "flex",
+        justifyContent: "center", 
+        alignItems: "center",
+        margin: "0",
+      }}
+    >
       <div className="register-content">
         <form className="reg-form" onSubmit={handleSubmit}>
           <h2>Register</h2>
