@@ -1,5 +1,3 @@
-
-
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
@@ -37,7 +35,7 @@ export default function Register() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      await axios.post("http://localhost:3001/auth/register", {
+      await axios.post("https://localhost:3001/auth/register", {
         username,
         password,
       });
@@ -62,7 +60,7 @@ export default function Register() {
         backgroundSize: "cover",
         backgroundPosition: "center",
         display: "flex",
-        justifyContent: "center", 
+        justifyContent: "center",
         alignItems: "center",
         margin: "0",
       }}

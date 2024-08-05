@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { useCookies } from "react-cookie";
 import axios from "axios";
@@ -39,7 +38,7 @@ export default function Login() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post("http://localhost:3001/auth/login", {
+      const response = await axios.post("https://localhost:3001/auth/login", {
         username,
         password,
       });
@@ -59,19 +58,18 @@ export default function Login() {
   };
 
   return (
-    // <div className="login-container">
-    // <img src="login.jpg"></img>
     <div
+      className="login-container"
       style={{
         position: "relative",
         minHeight: "100vh",
-        backgroundImage: "url(/login.jpg)", 
+        backgroundImage: "url(/login.jpg)", // Correct path to the image in the public folder
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
         backgroundPosition: "center",
         display: "flex",
-        justifyContent: "center", 
-        alignItems: "center", 
+        justifyContent: "center",
+        alignItems: "center",
         margin: "0",
       }}
     >

@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
@@ -66,7 +65,7 @@ export default function CreateRecipe() {
       const recipeWithVideoId = { ...recipe, videoUrl: videoId };
 
       const response = await axios.post(
-        "http://localhost:3001/recipes/create",
+        "https://localhost:3001/recipes/create",
         recipeWithVideoId,
         { headers: { authorization: cookies.session_token } }
       );
@@ -195,4 +194,3 @@ export default function CreateRecipe() {
     </div>
   );
 }
-
