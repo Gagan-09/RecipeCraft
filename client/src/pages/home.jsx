@@ -12,7 +12,9 @@ export default function Home() {
   useEffect(() => {
     const fetchRecipes = async () => {
       try {
-        const response = await axios.get("http://localhost:3001/recipes/get");
+        const response = await axios.get(
+          "https://recipecraft.onrender.com/recipes/get"
+        );
         setRecipes(response.data);
       } catch (err) {
         console.log(err);
@@ -22,7 +24,7 @@ export default function Home() {
     const fetchSavedRecipes = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3001/recipes/savedRecipes/ids/${userID}`
+          `https://recipecraft.onrender.com/recipes/savedRecipes/ids/${userID}`
         );
         setSavedRecipes(response.data.savedRecipes);
       } catch (err) {
@@ -38,7 +40,7 @@ export default function Home() {
     if (!userID) alert("Please login to save Recipes!");
     try {
       const response = await axios.put(
-        "http://localhost:3001/recipes/save",
+        "https://recipecraft.onrender.com/recipes/save",
         {
           recipeID,
           userID,

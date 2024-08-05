@@ -10,7 +10,7 @@ export default function SavedRecipes() {
     const fetchSavedRecipes = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3001/recipes/savedRecipes/${userID}`
+          `https://recipecraft.onrender.com/recipes/savedRecipes/${userID}`
         );
         setSavedRecipes(response.data.savedRecipes);
       } catch (err) {

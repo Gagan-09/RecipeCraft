@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: ["http://localhost:5173"],
+    origin: ["https://exquisite-concha-305e87.netlify.app/"],
     methods: ["POST", "GET", "PUT"],
     credentials: true,
   })
