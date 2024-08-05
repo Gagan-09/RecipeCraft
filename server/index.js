@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
+const path = require("path");
 require("dotenv").config();
 const mongoose = require("mongoose");
 const userRouter = require("./routes/userRouter.js");
@@ -11,16 +12,24 @@ const app = express();
 app.use(express.json());
 app.use(cookieParser());
 app.use(
-  cors({ 
-    origin: ["https://recipecraft-1.onrender.com"],
+  cors({
+    origin: ["https://exquisite-concha-305e87.netlify.app"],
     methods: ["POST", "GET", "PUT"],
     credentials: true,
   })
 );
 
-// Middleware
+// Serve static files from the React app
+app.use(express.static(path.join(__dirname, 'client/build')));
+
+// API routes
 app.use("/auth", userRouter);
 app.use("/recipes", recipesRouter);
+
+// Catchall handler to serve the React app for any non-API route
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+});
 
 // Database connection
 mongoose
