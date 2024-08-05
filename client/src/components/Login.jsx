@@ -59,7 +59,21 @@ export default function Login() {
   };
 
   return (
-    <div className="login-container">
+    //<div className="login-container">
+      <div
+      style={{
+        position: "relative",
+        minHeight: "100vh",
+        backgroundImage: "url(/login.jpg)", 
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        display: "flex",
+        justifyContent: "center", 
+        alignItems: "center", 
+        margin: "0",
+      }}
+    >
       <div className="login-content">
         <form className="login-form" onSubmit={handleSubmit}>
           <h2>Login</h2>
