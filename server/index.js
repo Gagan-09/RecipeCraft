@@ -10,7 +10,12 @@ const app = express();
 
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors());
+app.use(cors({
+  origin:["https://recipe-craft-9o7n.vercel.app"],
+  methods:["POST","GET","PUT",],
+  credentials:true
+  }
+));
 
 // Middleware
 app.use("/auth", userRouter);
