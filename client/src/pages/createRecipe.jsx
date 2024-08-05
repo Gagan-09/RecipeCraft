@@ -65,7 +65,7 @@ export default function CreateRecipe() {
       const recipeWithVideoId = { ...recipe, videoUrl: videoId };
 
       const response = await axios.post(
-        "https://localhost:3001/recipes/create",
+        "http://localhost:3001/recipes/create",
         recipeWithVideoId,
         { headers: { authorization: cookies.session_token } }
       );
