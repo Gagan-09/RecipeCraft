@@ -26,10 +26,10 @@ app.use(express.static(path.join(__dirname, 'client/build')));
 app.use("/auth", userRouter);
 app.use("/recipes", recipesRouter);
 
-// Catchall handler to serve the React app for any non-API route
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
-});
+// // Catchall handler to serve the React app for any non-API route
+// app.get('*', (req, res) => {
+//   res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+// });
 
 // Database connection
 mongoose
