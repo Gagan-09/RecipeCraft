@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: ["https://recipecraft.netlify.app/"],
+    origin: ["https://recipecraft.netlify.app"],
     methods: ["POST", "GET", "PUT"],
     credentials: true,
   })
