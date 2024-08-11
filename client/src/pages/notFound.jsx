@@ -7,3 +7,7 @@ export default function NotFound() {
     </div>
   );
 }
+
+
+// http://localhost:3001
+// https://recipecraft.onrender.com
