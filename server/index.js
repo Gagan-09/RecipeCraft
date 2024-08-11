@@ -11,13 +11,6 @@ const app = express();
 
 app.use(express.json());
 app.use(cookieParser());
-// app.use(
-//   cors({
-//     origin: ["https://exquisite-concha-305e87.netlify.app"],
-//     methods: ["POST", "GET", "PUT"],
-//     credentials: true,
-//   })
-// );
 app.use(
   cors({
     origin: "*",
@@ -30,6 +23,14 @@ app.use(
 // API routes
 app.use("/auth", userRouter);
 app.use("/recipes", recipesRouter);
+
+// Serve static files from the React app
+app.use(express.static(path.join(__dirname, "client/build")));
+
+// Handle React routing, return all requests to React app
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client/build", "index.html"));
+});
 
 // Database connection
 mongoose
