@@ -19,6 +19,13 @@ app.use(
     optionsSuccessStatus: 204,
   })
 );
+// app.use(
+//   cors({
+//     origin: ["https://recipecraft.netlify.app"],
+//     methods: ["POST", "GET", "PUT"],
+//     credentials: true,
+//   })
+// );
 
 // API routes
 app.use("/auth", userRouter);

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 export default function NotFound() {
   return (
@@ -8,6 +8,5 @@ export default function NotFound() {
   );
 }
 
-
-// http://localhost:3001
+// https://recipecraft.onrender.com
 // https://recipecraft.onrender.com
