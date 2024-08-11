@@ -11,35 +11,29 @@ const app = express();
 
 app.use(express.json());
 app.use(cookieParser());
+// app.use(
+//   cors({
+//     origin: ["https://exquisite-concha-305e87.netlify.app"],
+//     methods: ["POST", "GET", "PUT"],
+//     credentials: true,
+//   })
+// );
 app.use(
   cors({
-    origin: ["https://exquisite-concha-305e87.netlify.app"],
-    methods: ["POST", "GET", "PUT"],
-    credentials: true,
+    origin: "*",
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    preflightContinue: false,
+    optionsSuccessStatus: 204,
   })
 );
-
-// Serve static files from the React app
-app.use(express.static(path.join(__dirname, 'client/build')));
 
 // API routes
 app.use("/auth", userRouter);
 app.use("/recipes", recipesRouter);
 
-// // Catchall handler to serve the React app for any non-API route
-// app.get('*', (req, res) => {
-//   res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
-// });
-
 // Database connection
 mongoose
-  .connect(
-    process.env.MONGO_URI
-    //   {
-    //   useNewUrlParser: true,
-    //   useUnifiedTopology: true,
-    // })
-  )
+  .connect(process.env.MONGO_URI)
   .then(() => console.log("Database connection successful"))
   .catch((err) => console.error("Database connection error:", err));
 
